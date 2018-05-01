@@ -4,7 +4,7 @@
     user-select: none;
     user-focus: none;
     outline: none;
-    font-family: 'Concert One', cursive;
+    font-family: 'Fjalla One', sans-serif;
 }
 /*keyframes here*/
 @keyframes fadeOut {
@@ -85,7 +85,7 @@
     0px -5px 35px rgba(255,255,255,0.3);
 }
 .titleFont {
-    font-family: 'Original Surfer', cursive;
+    font-family: 'Anton', sans-serif;
     font-size: 12vmin;
     text-align: center;
 }
@@ -153,38 +153,23 @@
 }
                                     /*ENTIRE PAGE HERE */
 .mainPageContainer{
-    position: absolute;
+    position: relative;
     height: 100vh;
-    width: 100vw;
-    background-image: url("images/surferBg0.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/surferBg0.jpg");
     background-repeat: no-repeat;
     background-size: cover ;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 5;
-    visibility: hidden;
-}
-.mainPageContainer.visible{
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    background-image: url("images/surferBg0.jpg");
-    background-repeat: no-repeat;
-    background-size: cover ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation-name: fadeInRight;
-    animation-duration: .7s;
-    transition-timing-function: ease-in;
-    z-index: 5;
-    visibility: visible;
+    background-position: fixed;
 }
 .searchPageContent{
     max-width: 70%;
     width: 100%;
     margin-bottom: 7%;
+    text-align: center;
+    color:white; 
 }
 .searchHistory{
     margin-top: 5%;
@@ -215,43 +200,28 @@
     0px -5px 35px rgba(255,255,255,0.3);
 }
 .formContainer{
-    width: 100%;
-    background-color: rgba(128, 128, 128, 0.3);
     display: flex;
     justify-content: space-between;
-    box-shadow: .1em .1em .1em .1em black;
+
 }
 .inputForm{
     width: 100%;
-    height: 100%;
 }
 .locationInput{
-    font-family: 'Concert One', cursive;
     width: 100%;
-    box-sizing: border-box;
-    font-size: 2.5vmin;
-    background-color: rgba(255, 255, 255, 0.73);
-    padding: .7em 1em .7em 1em;
-    transition: width 0.4s ease-in-out;
-    cursor: pointer;
+    padding: 10px;
 }
 .locationInput:focus {
     width: 100%;
     cursor: auto;
 }
 .searchButton{
-    border-radius: 10%;
-    width: 100%;
-    max-width: 6vmin;
+    width: 20%;
     background-color: #38a2b8;
-    background-image: url('images/searchicon.png');
-    background-position: 5% 38%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    cursor: pointer;
+    border:none;
 }
 .searchButton:hover{
-    transform: scale(1.1);
+    filter: brightness(80%);
 }
 .searchButton:active{
     transform: scale(.98);

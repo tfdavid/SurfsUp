@@ -105,13 +105,11 @@ function init(){
 // to change icon when page is loading;
 
 function loading() {
-    $(".searchButton").css("background-image", "url('')");
-    $(".searchButton").css("background-image", "url('images/loader.gif')");
+    //use font awesome icons
 }
 
 function doneLoading(){
-    $(".searchButton").css("background-image", "url('')");
-    $(".searchButton").css("background-image", "url('images/searchicon.png')");
+       //use font awesome icons
 }
 
 // sets local time to the current hour
