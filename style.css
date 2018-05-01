@@ -2,10 +2,20 @@
     box-sizing: border-box;
     margin: 0;
     user-select: none;
-    user-focus: none;
     outline: none;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
+
+h1 {
+    font-family: 'Anton', sans-serif;
+}
+
+.mainPageContainer h2 {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300; 
+}
+
 /*keyframes here*/
 @keyframes fadeOut {
     from {
@@ -85,7 +95,6 @@
     0px -5px 35px rgba(255,255,255,0.3);
 }
 .titleFont {
-    font-family: 'Anton', sans-serif;
     font-size: 12vmin;
     text-align: center;
 }
@@ -210,6 +219,9 @@
 .locationInput{
     width: 100%;
     padding: 10px;
+    font-size: 1.5em; 
+    color: #515151;
+
 }
 .locationInput:focus {
     width: 100%;
@@ -228,49 +240,13 @@
 }
 /*DataPage*/                        /*ENTIRE PAGE HERE*/
 .dataPageContainer{
-    /*border: 2px solid red;*/
-    position: absolute;
     height: 100vh;
-    width: 100vw;
-    /*background: linear-gradient(120deg, #ece837, #ec8c53);*/
-    /*background-image: url("images/infoBeachImage.jpg");*/
-    animation-name: fadeOutBottom;
-    animation-duration: .7s;
     transition-timing-function: ease-in;
-    background-image: url("https://wonderopolis.org/wp-content/uploads/2014/07/dreamstime_xl_22656707-custom.jpg");
-    background-size: cover;
-    visibility: hidden;
-    /*z-index: 100;*/
+    padding-top: 20px;
 }
-.dataPageContainer.visible{
-    /*border: 2px solid red;*/
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    /*background: linear-gradient(120deg, #ece837, #ec8c53);*/
-    /*background-image: url("images/infoBeachImage.jpg");*/
-    background-image: url("https://wonderopolis.org/wp-content/uploads/2014/07/dreamstime_xl_22656707-custom.jpg");
-    background-size: cover;
-    animation-name: fadeInRight;
-    animation-duration: .7s;
-    transition-timing-function: ease-in;
-    z-index: 10;
-    visibility: visible;
-}
-.dataPageContainer.hidden{
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    animation-name: fadeOutBottom;
-    animation-duration: .7s;
-    transition-timing-function: linear;
-    background-image: url("https://wonderopolis.org/wp-content/uploads/2014/07/dreamstime_xl_22656707-custom.jpg");
-    background-size: cover;
-    visibility: hidden;
-    z-index: 10;
-}
+
+
 .headerContainer {
-    /*border: 1px solid black;*/
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -279,7 +255,6 @@
 .mainTitle {
     text-align: center;
     height: 100%;
-    font-family: 'Concert One', cursive;
 }
 h1 {
     font-size: 4vmin;
@@ -362,8 +337,6 @@ h2 {
     font-size: 2.3vmin;
     justify-content: space-around;
     height: 16%;
-    background-color: rgba(240,255,255,0.3);
-    box-shadow: 10px 10px 27px 1px rgba(211,214,214,1);
 }
 .tempBox {
     /*border: 1px solid black;*/
@@ -379,14 +352,12 @@ h2 {
     cursor: pointer;
 }
 .tempBox:hover{
-    transform: scale(1.1);
-    /*box-shadow: .01em .01em .01em .01em black;*/
+    filter: brightness(80%);
     border-radius: 15%;
     color: #0fb8ae;
-    text-shadow: 1px 1px black;
 }
 .tempBox:active{
-    transform: scale(.95);
+    filter: brightness(80%);
 }
 .tempTime{
     /*border: 1px solid purple;*/
@@ -418,6 +389,7 @@ h2 {
     justify-content: flex-start;
     align-items: flex-start;
 }
+
 .tideInfoHeader{
     width: 100%;
     height: 10%;
@@ -444,11 +416,10 @@ h2 {
     justify-content: space-around;
     background-color: rgba(240,255,255,0.3);
     border-radius: 5px;
-    /*box-shadow: 10px 10px 71px 0px rgba(0,0,0,0.75);*/
 }
 .categoryTitle{
-    /*border: 3px solid crimson;*/
     height: 16%;
+    font-weight: 300;
 }
 .tideInfoData{
     /* border: 2px solid green; */
@@ -504,14 +475,13 @@ h2 {
     background: no-repeat center;
     background-size: cover;
     border-radius: 5px;
-    box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
 }
 .photoDiv:hover{
     cursor: pointer;
-    transform: scale(1.1);
+    filter: brightness(80%);
 }
 .photoDiv:active{
-    transform: scale(.9);
+    filter: brightness(80%);
 }
 .signInModal{
     display: none;
@@ -535,7 +505,7 @@ h2 {
     height: 100%;
     overflow: hidden;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.8);
 }
 .pictureContent {
     position: relative;
@@ -546,9 +516,7 @@ h2 {
     background-size: cover;
     margin: 10% auto; 
     padding: 20px;
-    border: 1px solid black;
     border-radius: 10px;
-    box-shadow: 10px 10px 18px 0px rgba(0,0,0,0.75);
     width: 50%;
     height: 50%;
     font-size: 2em;

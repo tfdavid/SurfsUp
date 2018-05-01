@@ -34,6 +34,7 @@ function init(){
     checkSoundOnLoad();
     setLocalTime();
     playTitleMusic();
+    $('.dataPageContainer').hide();
     $('.muteButton').click(muteSound);
     $('.titleMuteButton').click(muteSound);
     $('.locationInput').attr('autocomplete','off');
@@ -193,6 +194,13 @@ function googleGeoLoc(name){
         url: 'https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyDbDr73Tuj2WLSNXkSc2P8mH2JdF0xjAeo&address=' + name,
         method: 'get',
         success: function(response){
+            $('.dataPageContainer').show();
+            $("html").animate(
+                {
+                    scrollTop: $(".dataPageContainer").offset().top
+                },
+                850
+            );
 
             $(".beachName").text("");         //to remove before reassigning
             $(".beachLocation").text("");

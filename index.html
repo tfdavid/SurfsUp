@@ -5,7 +5,7 @@
     <title>Surfs Up</title>     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Anton|Black+Han+Sans|Cabin|Fjalla+One|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Black+Han+Sans|Roboto|Fjalla+One" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
@@ -15,10 +15,19 @@
 </head>
 <body>
     <div class="mainPageContainer">
+        <div class="signInContainer" data-toggle="modal" data-target="#signInModal">
+            <h2 class="signUpBtn">Sign In</h2>
+        </div>
+        <div class="signUpContainer" data-toggle="modal" data-target="#signUpModal">
+            <h2 class="signUpBtn">Sign Up</h2>
+        </div>
+        <div class="signOutContainer" onClick="signOut()">
+            <h2 class="signOutBtn">Sign Out</h2>
+        </div>
         <div class="searchPageContent">
             
             <h1 class="titleFont">Surfs Up</h1>
-            <h3>Plan your week around the surf forecast</h3>
+            <h3>Plan your week around the surf forecast, brah</h3>
 
             <div class="formContainer">
                 <form class="inputForm">
@@ -40,9 +49,6 @@
             <div class="mainTitle">
                 <h1 class="beachName"></h1>
                 <h2 class="beachLocation"></h2>
-                <div class="newSearchContainer">
-                    <button class="newSearchButton">New Search</button>
-                </div>
             </div>
             <div class="sunset">
                 <div class="sunriseTitle">Sunset</div>
@@ -94,19 +100,19 @@
         </div>
         <div class="infoContainer">
             <div class="tideInfoContainer">
-                <div class = "tideInfoHeader">Statistics</div>
+                <h1 class = "tideInfoHeader">Statistics</h1>
                 <div class="tideInfoDataContainer">
                     <div class="tideInfoCategories">
-                        <div class="categoryTitle">Swell:</div>
-                        <div class="categoryTitle">Water Temperature:</div>
-                        <div class="categoryTitle">Wind Direction/Speed:</div>
-                        <div class="categoryTitle tide">Morning Tide: </div>
+                        <h4 class="categoryTitle">Swell:</h4>
+                        <h4 class="categoryTitle">Water Temperature:</h4>
+                        <h4 class="categoryTitle">Wind Direction/Speed:</h4>
+                        <h4 class="categoryTitle tide">Morning Tide: </h4>
                     </div>
                     <div class="tideInfoData">
-                        <div class="dataTitle swellData"></div>
-                        <div class="dataTitle waterTempData"></div>
-                        <div class="dataTitle windData"></div>
-                        <div class="tideData"></div>
+                        <h3 class="dataTitle swellData"></h3>
+                        <h3 class="dataTitle waterTempData"></h3>
+                        <h3 class="dataTitle windData"></h3>
+                        <h3 class="tideData"></h3>
                         <!--removed class dataTitle from tideData since its only one value -->
                     </div>
                 </div>
