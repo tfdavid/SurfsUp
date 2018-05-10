@@ -338,6 +338,7 @@ h2 {
     outline: none;
     text-decoration: none;
     font-family: Helvetica;
+    transition: all .2s;
 }
 
 .sunrise {
