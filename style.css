@@ -394,7 +394,7 @@ h2 {
     justify-content: space-around;
     height: 16%;
     /* background-color: rgba(240,255,255,0.3); */
-    box-shadow: 10px 10px 27px 1px rgba(211,214,214,1);
+    /* box-shadow: 10px 10px 27px 1px rgba(211,214,214,1); */
 }
 .tempBox {
     /*border: 1px solid black;*/
