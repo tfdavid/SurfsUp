@@ -282,7 +282,7 @@ function weatherApi(lat, long){
             var tideArray = result.data.weather[0].tides[0].tide_data[1];
             var tideHeight = tideArray.tideHeight_mt;
             var tideType = tideArray.tide_type;
-            $(".tideData").text(tideHeight + " meters, " + tideType);
+            $(".tideData").text("  " + tideHeight + " meters, " + tideType);
 
             //find all weather data and put into weatherArray
             for(var weatherDayIndex = 0; weatherDayIndex <= 1; weatherDayIndex++) {
@@ -305,17 +305,17 @@ function weatherApi(lat, long){
                 timeOfDayStats.push(statsObj);
               
                 $(".dataTitle").text('');  //clear text
-                $(".swellData").text(timeOfDayStats[0].swellHeight + "ft, " + timeOfDayStats[0].swellDir);
-                $(".waterTempData").html(timeOfDayStats[0].waterTemp + "&#x2109");
-                $(".windData").text(timeOfDayStats[0].windSpeed + "mph, " + timeOfDayStats[0].windDir);
+                $(".swellData").text("  " + timeOfDayStats[0].swellHeight + "ft, " + timeOfDayStats[0].swellDir);
+                $(".waterTempData").html("  " + timeOfDayStats[0].waterTemp + "&#x2109");
+                $(".windData").text("  " + timeOfDayStats[0].windSpeed + "mph, " + timeOfDayStats[0].windDir);
             }
 
             $(".tempBox").on("click", function(){
                 var weatherAtTime = timeOfDayStats[this.id];
                 $(".dataTitle").text('');  //clear text
-                $(".swellData").text(weatherAtTime.swellHeight + "ft, " + weatherAtTime.swellDir);
-                $(".waterTempData").html(weatherAtTime.waterTemp+"&#x2109");
-                $(".windData").text(weatherAtTime.windSpeed+"mph, "+ weatherAtTime.windDir);
+                $(".swellData").text("  " + weatherAtTime.swellHeight + "ft, " + weatherAtTime.swellDir);
+                $(".waterTempData").html("  " + weatherAtTime.waterTemp+"&#x2109");
+                $(".windData").text("  " + weatherAtTime.windSpeed+"mph, "+ weatherAtTime.windDir);
             });
 
             counter++;
