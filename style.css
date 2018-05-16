@@ -487,6 +487,9 @@ h2 {
     transform: skewX(-30deg);
     text-align: center;
 }
+.categoryTitle_text{
+    transform: skewX(30deg);
+}
 .tideInfoData{
     /* border: 2px solid green; */
     padding-left: 3%;
