@@ -232,7 +232,7 @@ function googleGeoLoc(name){
 function localTemp(lat, long){
     $.ajax({
         dataType: "json",
-        url: `https://api.worldweatheronline.com/premium/v1/weather.ashx?key=8430e70df2d54ab89d3193134181903&format=json&q=${lat}, ${long}&num_of_days=3`,
+        url: `https://api.worldweatheronline.com/premium/v1/weather.ashx?key=a7a2d7d5ec2945b994c20748181905&format=json&q=${lat}, ${long}&num_of_days=3`,
         method: 'get',
         success: function(result){
             $(`.temp .tempTemp`).text("");
@@ -263,7 +263,7 @@ function localTemp(lat, long){
 function weatherApi(lat, long){
     $.ajax({
         dataType: "json",
-        url: `https://api.worldweatheronline.com/premium/v1/marine.ashx?key=8430e70df2d54ab89d3193134181903&num_of_days=3&tp=3&format=json&q=${lat}, ${long}&tide=yes`,
+        url: `https://api.worldweatheronline.com/premium/v1/marine.ashx?key=a7a2d7d5ec2945b994c20748181905&num_of_days=3&tp=3&format=json&q=${lat}, ${long}&tide=yes`,
         method: "get",
         success: function(result){
             var weatherArray = [];
